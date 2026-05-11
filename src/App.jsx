@@ -4,16 +4,25 @@ function App() {
   const api_url = "https://lanciweb.github.io/demo/api/actresses/";
   const [actors, setActors] = useState([]);
 
-  useEffect(() => {
+
+  function handleActor() {
     fetch(api_url)
-      .then((res) => res.json())
-      .then((data) => {
-        setActors(data);
-      });
-  });
+    .then((res) => res.json())
+    .then((data) => {
+      setActors(data)
+  })}
+
+  // useEffect(() => {
+  //   fetch(api_url)
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       setActors(data);
+  //     });
+  // });
 
   return (
     <>
+    <button onClick={handleActor} type="button" className="btn">Carica attori</button>
       <div className="container">
         <div className="row row-cols-1 row-cols-sm-2 g-4">
           {actors.map((actor) => (
