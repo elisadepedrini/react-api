@@ -1,0 +1,16 @@
+/* * {background-color: #1a1510;} */
+
+img {width: 20rem}
+
+
+.card {
+    display: flex !important;
+    flex-direction: row !important;
+    background-color: #fff9f0 !important;
+    border: 1px solid #ddd0bb;
+}
+
+.title-card {
+    font-size: 14px;
+    color: goldenrod;
+}
